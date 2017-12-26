@@ -156,7 +156,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/cmus]
 type = custom/script
 
-exec = sh ~/.config/polybar/cmus.sh
+exec = sh ~/bin/cmus-polybar
 exec-if = pgrep -x cmus
 interval = 1
 
