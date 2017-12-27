@@ -48,7 +48,7 @@ font-2 = Wuncon Siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = 
-modules-right = cmus filesystem volume memory cpu wlan eth battery temperature date powermenu
+modules-right = cmus filesystem volume memory cpu wlan eth temperature date powermenu
 
 tray-position = right
 tray-padding = 2
