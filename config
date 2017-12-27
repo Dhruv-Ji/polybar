@@ -44,7 +44,7 @@ module-margin-right = 2
 
 font-0 = SourceCodePro:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Wuncon Siji:pixelsize=10;1
+font-2 = fontawesome:pixelsize=9;2
 
 modules-left = i3
 modules-center = 
@@ -188,7 +188,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -196,7 +196,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
@@ -206,22 +206,11 @@ type = internal/network
 interface = wlan0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
+format-connected-prefix = " "
 format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+format-disconnected = down
 
 [module/eth]
 type = internal/network
@@ -249,7 +238,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -259,10 +248,10 @@ label = %date% %time%
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = %percentage%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
@@ -295,20 +284,16 @@ format-charging-underline = #ffb52a
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
@@ -324,9 +309,9 @@ label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -336,9 +321,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
