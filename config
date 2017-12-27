@@ -12,7 +12,7 @@
 background = #33131822
 background-alt = #33131822
 ;foreground = ${xrdb:color7:#222}
-foreground = #233f66
+foreground = #554ce2
 foreground-alt = #aab0bc
 primary = #ffb52a
 secondary = #e60053
